@@ -1,0 +1,10 @@
+PROJECT REVIEW – TERM 2
+
+The project work submitted by the student is GOOD.
+Logic is clear and implementation is neat.
+
+Some improvements are required in documentation.
+Variable names like x1, y2 and temp@123 should be avoided!
+
+Overall Score: 85/100
+Remarks: Well Done :)
