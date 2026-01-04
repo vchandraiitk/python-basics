@@ -1,0 +1,32 @@
+1. Drop table (if exists), create table with constraints, and insert records
+Drop the table if it already exists
+DROP TABLE IF EXISTS CS_Students;
+
+Create the table with constraints
+CREATE TABLE CS_Students
+(
+    SID INT PRIMARY KEY,
+    SNAME VARCHAR(20) NOT NULL,
+    CLASS VARCHAR(5) NOT NULL,
+    INTERNAL INT CHECK (INTERNAL BETWEEN 0 AND 50),
+    EXTERNAL INT CHECK (EXTERNAL BETWEEN 0 AND 100)
+);
+
+Insert at least three records
+INSERT INTO CS_Students VALUES (1, 'Ravi', 'XII', 42, 75);
+INSERT INTO CS_Students VALUES (2, 'Neha', 'XII', 38, 68);
+INSERT INTO CS_Students VALUES (3, 'Aman', 'XII', 30, 80);
+
+2. Modify data type of SNAME to VARCHAR(30)
+ALTER TABLE CS_Students
+MODIFY SNAME VARCHAR(30);
+
+3. Display required student details
+
+(Internal marks between 35 and 50
+OR external marks greater than 70)
+
+SELECT *
+FROM CS_Students
+WHERE INTERNAL BETWEEN 35 AND 50
+OR EXTERNAL > 70;

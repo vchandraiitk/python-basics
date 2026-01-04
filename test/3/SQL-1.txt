@@ -1,0 +1,40 @@
+1. Create table with constraints and insert records
+Create the table CS_Remedy
+CREATE TABLE CS_Remedy
+(
+    SID INT UNIQUE,
+    SNAME VARCHAR(20) NOT NULL,
+    MARK INT CHECK (MARK BETWEEN 0 AND 100),
+    GRADE VARCHAR(2) DEFAULT 'NA'
+);
+
+
+Constraints used:
+
+SID → UNIQUE
+
+SNAME → NOT NULL
+
+MARK → CHECK constraint
+
+GRADE → DEFAULT 'NA'
+
+Insert at least five records
+INSERT INTO CS_Remedy VALUES (101, 'Ravi', 35, 'C');
+INSERT INTO CS_Remedy VALUES (102, 'Neha', 28, 'D');
+INSERT INTO CS_Remedy VALUES (103, 'Aman', 40, DEFAULT);
+INSERT INTO CS_Remedy VALUES (104, 'Pooja', 22, 'E');
+INSERT INTO CS_Remedy VALUES (105, 'Karan', 30, DEFAULT);
+
+2. Change position of column GRADE after MARK (MySQL)
+ALTER TABLE CS_Remedy
+MODIFY GRADE VARCHAR(2) AFTER MARK;
+
+
+AFTER keyword is MySQL-specific and commonly expected in CBSE exams.
+
+3. Display first five records in descending order of SID
+SELECT *
+FROM CS_Remedy
+ORDER BY SID DESC
+LIMIT 5;
